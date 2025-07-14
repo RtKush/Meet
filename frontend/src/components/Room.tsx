@@ -260,7 +260,7 @@ const Room: React.FC<RoomProps> = ({ name, localAudioTrack, localVideoTrack }) =
   const peerConnection = useRef<RTCPeerConnection | null>(null);
 
   useEffect(() => {
-    const s = io("http://localhost:5000"); // your backend Socket.IO server
+    const s = io("https://meet-server-eyyx.onrender.com/"); // your backend Socket.IO server
     setSocket(s);
 
     s.on("connect", () => {
